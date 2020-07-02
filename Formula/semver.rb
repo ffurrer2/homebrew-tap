@@ -2,16 +2,16 @@
 class Semver < Formula
   desc "A semantic versioning command line utility written in Go."
   homepage "https://github.com/ffurrer2/semver"
-  version "1.0.0"
+  version "1.0.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ffurrer2/semver/releases/download/1.0.0/semver_darwin_amd64.tar.gz"
-    sha256 "5aad47cc00cbb32a29fa1cf6e43e4748320623b4f060c5cb40cc6bee890c1917"
+    url "https://github.com/ffurrer2/semver/releases/download/1.0.1/semver_darwin_amd64.tar.gz"
+    sha256 "cb9e2b120d3ccb08cd36b1743cb567d413c23b56832c201dcd1135c765f8da38"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/1.0.0/semver_linux_amd64.tar.gz"
-      sha256 "9bfe3c3f47604da3f33cf324502c29bd9addb91dde0e2b637b6c346176b78d49"
+      url "https://github.com/ffurrer2/semver/releases/download/1.0.1/semver_linux_amd64.tar.gz"
+      sha256 "9cf9de207daad565f49bba3e1babde4cbb4964a35fd170f8699fa7f0e3c51058"
     end
   end
 
