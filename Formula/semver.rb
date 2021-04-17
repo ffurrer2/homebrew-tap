@@ -10,11 +10,11 @@ class Semver < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ffurrer2/semver/releases/download/v1.1.0/semver_darwin_amd64.tar.gz"
-    sha256 "5762e1b07a93f6fce0f97ae071a8d7c58d4bc67e0ff37fdc5277f2dd2e676a0d"
+    sha256 "441412663e9762dbacccbfd2788be397e8db341ed9130419f31b039396140235"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/ffurrer2/semver/releases/download/v1.1.0/semver_linux_amd64.tar.gz"
-    sha256 "7a41e7d03861f1324b9ddae9398b77c5a9b2db1e0325df9701f31f9bcd87ec1f"
+    sha256 "0e8311f4dae2c4214d437282dbf8598e6d81fddcc154dba03c3cf4c46a5a58ae"
   end
 
   def install
