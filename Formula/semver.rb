@@ -10,7 +10,7 @@ class Semver < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_amd64.tar.gz"
-      sha256 "ce8b4bae50485d1cd93d382a4e7bed903723f57aadd73570212b9880e2c360c7"
+      sha256 "2d66b111641c71b8673b866a5a2a8bf6d819a07fc01ab95d46f7aba4d6f91a73"
 
       def install
         bin.install "semver"
@@ -18,7 +18,7 @@ class Semver < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_arm64.tar.gz"
-      sha256 "9df21b5e09fe86dd4c82a87eabdddd89022ef2160bc15712faab00ac694222e3"
+      sha256 "5d06e34d095e09f270bffe9562b0fee26c39129791849692eb08f634bce178d3"
 
       def install
         bin.install "semver"
@@ -29,7 +29,7 @@ class Semver < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_arm64.tar.gz"
-      sha256 "cd18f0813ddec95ccd630d86a5a04de3c7df5ffc9d8168b24de49126ae4ae240"
+      sha256 "650f595dfee205dc2cb66dc71af8cd473142a0f0d9b98f5d3528d091f7579ff3"
 
       def install
         bin.install "semver"
@@ -37,7 +37,7 @@ class Semver < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_amd64.tar.gz"
-      sha256 "1c74796589462b9fb67e9b69ee9f582eb0a81854d4a6fbba31a5e21da7e95bc8"
+      sha256 "a2a638abaf4db192243e36e1206ed567599eb919f91384e1a688f22f3b7e2d91"
 
       def install
         bin.install "semver"
