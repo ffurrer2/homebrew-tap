@@ -5,20 +5,20 @@
 class Semver < Formula
   desc "A semantic versioning command line utility written in Go."
   homepage "https://github.com/ffurrer2/semver"
-  version "1.2.0"
+  version "1.3.0-test"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_amd64.tar.gz"
-      sha256 "80416a0ab43e3dcf6e51dc21a6b4a3482564284dfec40c8b24fdb39f69206fdc"
+    if Hardware::CPU.arm?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.3.0-test/semver_darwin_arm64.tar.gz"
+      sha256 "24d8ebd38421843be999190c807e22bac99e6e6b3b893029adc9cf2048ac1e2e"
 
       def install
         bin.install "semver"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_arm64.tar.gz"
-      sha256 "30c7c7ab4e6710da74cd55fe6fbfaa7820d86d51099ea858811f622ad1a333b0"
+    if Hardware::CPU.intel?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.3.0-test/semver_darwin_amd64.tar.gz"
+      sha256 "58a8c8ac852fc53d69f5b91b615a97869c9d2436724f5842e1911ba2c3fa104b"
 
       def install
         bin.install "semver"
@@ -27,17 +27,17 @@ class Semver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_arm64.tar.gz"
-      sha256 "d9bea9f5d9cae0867448f2eb1ee9f7dddf36fcdbc042897e35d024b3b30e851f"
+    if Hardware::CPU.intel?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.3.0-test/semver_linux_amd64.tar.gz"
+      sha256 "fcff076b5d11e4b1e621195cf8a6ad01b4f15d52901254036b29b27dba65f32a"
 
       def install
         bin.install "semver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_amd64.tar.gz"
-      sha256 "1f2f2795671b5c90f8c7c3b60fb3283b4a3de088afa3b1fc4e4e8dc252517440"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.3.0-test/semver_linux_arm64.tar.gz"
+      sha256 "aa4324c76d8f26441e0d375c548bbf4faae10cb57d69ca7ec7896139c8b0101e"
 
       def install
         bin.install "semver"
