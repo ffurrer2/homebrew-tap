@@ -6,11 +6,12 @@ class Semver < Formula
   desc "A semantic versioning command line utility written in Go."
   homepage "https://github.com/ffurrer2/semver"
   version "1.2.0"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_arm64.tar.gz"
-      sha256 "43711afb9b96dd39a256f962527e409e748c0c1f3ff269f18a191e078c0c77a3"
+      sha256 "2c050d57a56792c0c04058709ca3ccbff8018a37a7c8fa53f935106ba9392e0c"
 
       def install
         bin.install "semver"
@@ -18,7 +19,7 @@ class Semver < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_darwin_amd64.tar.gz"
-      sha256 "14e820f3db041edcc3280f41d5fdc225821879f1b29f1eca88dc7b553af63015"
+      sha256 "56044b181e486edc67021f5225cdb8189387f5692233f1ae3642c2a33344b9b4"
 
       def install
         bin.install "semver"
@@ -27,17 +28,17 @@ class Semver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_amd64.tar.gz"
-      sha256 "d9ad3c3b5c776e6101a7a6441e972819e889836f3dadaa0c1040671520d876c9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_arm64.tar.gz"
+      sha256 "4f40f3dd245474eff27d6ec90ae36c157b34dbb940bd3ab77e1d2563dcce1747"
 
       def install
         bin.install "semver"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_arm64.tar.gz"
-      sha256 "00ce3186a8fb3f55c5e0b9324c84871c641d37ab8d55c2100ad82cde4aedb6e2"
+    if Hardware::CPU.intel?
+      url "https://github.com/ffurrer2/semver/releases/download/v1.2.0/semver_linux_amd64.tar.gz"
+      sha256 "588c4e20c6e149eeae75101d97239846bf59c9d34629cf2aad3f690c0163c532"
 
       def install
         bin.install "semver"
