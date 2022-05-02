@@ -6,9 +6,9 @@ on:
     - main
 
 jobs:
-  linux-x64:
-    name: Test Linux x64 formulas
-    runs-on: ubuntu-20.04
+  darwin-x64-licensed:
+    name: Test darwin/x64/licensed
+    runs-on: macos-latest
     steps:
     - name: Test licensed installation
       run: |
@@ -16,12 +16,33 @@ jobs:
         brew install ffurrer2/tap/licensed
         licensed version
 
-  darwin-x64:
-    name: Test Darwin x64 formulas
-    runs-on: macos-12
+  darwin-x64-semver:
+    name: Test darwin/x64/semver
+    runs-on: macos-latest
+    steps:
+
+    - name: Test semver installation
+      run: |
+        brew tap ffurrer2/homebrew-tap
+        brew install ffurrer2/tap/semver
+        semver version
+
+  linux-x64-licensed:
+    name: Test linux/x64/licensed
+    runs-on: ubuntu-latest
     steps:
     - name: Test licensed installation
       run: |
         brew tap ffurrer2/homebrew-tap
         brew install ffurrer2/tap/licensed
         licensed version
+
+  linux-x64-semver:
+    name: Test linux/x64/semver
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test semver installation
+      run: |
+        brew tap ffurrer2/homebrew-tap
+        brew install ffurrer2/tap/semver
+        semver version
