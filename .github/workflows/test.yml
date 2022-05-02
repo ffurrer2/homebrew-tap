@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  linux-x64:
+    name: Test Linux x64 formulas
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Test licensed installation
+      run: |
+        brew tap ffurrer2/homebrew-tap
+        brew install ffurrer2/tap/licensed
+        licensed version
+
+  darwin-x64:
+    name: Test Darwin x64 formulas
+    runs-on: macos-12
+    steps:
+    - name: Test licensed installation
+      run: |
+        brew tap ffurrer2/homebrew-tap
+        brew install ffurrer2/tap/licensed
+        licensed version
