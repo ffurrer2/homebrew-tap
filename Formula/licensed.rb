@@ -1,13 +1,13 @@
 class Licensed < Formula
   desc "A Ruby gem to cache and verify the licenses of dependencies"
   homepage "https://github.com/github/licensed"
-  version "3.7.4"
+  version "3.7.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/github/licensed/releases/download/3.7.4/licensed-3.7.4-darwin-x64.tar.gz"
-      sha256 "986da6155e119d0a7634f1e893106704d6d0768e845783363d93c6a16fbbccaa"
+      url "https://github.com/github/licensed/releases/download/3.7.5/licensed-3.7.5-darwin-x64.tar.gz"
+      sha256 "b623e8ce60c9aab4f220d209b96d7651888dff8499ea7fc9419cc4b5cb14cb0b"
 
       def install
         bin.install "licensed"
@@ -17,8 +17,8 @@ class Licensed < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/github/licensed/releases/download/3.7.4/licensed-3.7.4-linux-x64.tar.gz"
-      sha256 "9a4f1eeb975c0d870ffeedb451c98b379376f683e9c96636939af00ea6ddd810"
+      url "https://github.com/github/licensed/releases/download/3.7.5/licensed-3.7.5-linux-x64.tar.gz"
+      sha256 "aeb7e77f34036b0bd64c6c8fdd3b6a1f079c723581b76b19e4cb693ee4221bed"
 
       def install
         bin.install "licensed"
