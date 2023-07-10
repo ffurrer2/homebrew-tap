@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Test semver installation
       run: |
+        set -e
         brew tap ffurrer2/homebrew-tap
         brew install ffurrer2/tap/semver
         semver version
