@@ -5,21 +5,21 @@
 class Semver < Formula
   desc "A semantic versioning command line utility written in Go."
   homepage "https://github.com/ffurrer2/semver"
-  version "2.2.0"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ffurrer2/semver/releases/download/v2.2.0/semver_2.2.0_darwin_arm64.tar.gz"
-      sha256 "0074fad48b87d763689147f7e889ec8aebf5b1c77423f0fff6bfd1023bcbff45"
+      url "https://github.com/ffurrer2/semver/releases/download/v2.3.0/semver_2.3.0_darwin_arm64.tar.gz"
+      sha256 "1b1eb5ad0c6849265c642831fe05d01336a9249c2db6ba6d8fc975a441022078"
 
       def install
         bin.install "semver"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v2.2.0/semver_2.2.0_darwin_amd64.tar.gz"
-      sha256 "f278575d947380dfba00f35c2ac3d4b0d153b12e15bf5e857a8f0d344a96c9d6"
+      url "https://github.com/ffurrer2/semver/releases/download/v2.3.0/semver_2.3.0_darwin_amd64.tar.gz"
+      sha256 "fa9eccdfe3edac7f64949cc2e170a52d6a4a42413fec65684a0ca3e76c5aa136"
 
       def install
         bin.install "semver"
@@ -29,16 +29,16 @@ class Semver < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v2.2.0/semver_2.2.0_linux_amd64.tar.gz"
-      sha256 "043ef239ada84026e40a5d3cc4f4531b6f90d9ef28239d822bea5932e74e77d7"
+      url "https://github.com/ffurrer2/semver/releases/download/v2.3.0/semver_2.3.0_linux_amd64.tar.gz"
+      sha256 "b2f5835a221bd2a09c378fc8c045efdbf018812f7d6dd15022777e9fa6ff9278"
 
       def install
         bin.install "semver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ffurrer2/semver/releases/download/v2.2.0/semver_2.2.0_linux_arm64.tar.gz"
-      sha256 "b6deb1e14d16e1b8ea95935e3964194554149e276d14a0d4f276160f627da7d2"
+      url "https://github.com/ffurrer2/semver/releases/download/v2.3.0/semver_2.3.0_linux_arm64.tar.gz"
+      sha256 "34a61313b2544e224ced56d38fb7d1cf6ad3c4b5b78fc2e8e90c8777554881ca"
 
       def install
         bin.install "semver"
