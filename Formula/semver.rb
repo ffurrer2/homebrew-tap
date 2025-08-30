@@ -10,8 +10,8 @@ class Semver < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ffurrer2/semver/releases/download/v2.11.0/semver_2.11.0_darwin_amd64.tar.gz"
-      sha256 "8a5395e1038d63b7fb3d26e0bd00c4cb62c4deb3db84cc94542462095df9c588"
+      url "https://github.com/ffurrer2/semver/archive/refs/tags/v2.11.1.tar.gz"
+      sha256 "1ed8006ed875fe4c30a5321537d070bf531c2841d41bf32cf793d60893cca372"
 
       def install
         bin.install "semver"
